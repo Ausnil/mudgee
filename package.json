@@ -1,0 +1,14 @@
+{
+  "name": "dubbo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "build": "concurrently \"cd backend && npm run build\" \"cd frontend && npm run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
